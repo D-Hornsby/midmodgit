@@ -4,7 +4,7 @@ import elearch from './images/elearch.jpg'
 import goblins from './images/goblins.jpg'
 import squrleyguy from './images/squrleyguy.jpg'
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
-import src from 'image/avif'
+
 
 
 function Carousel({ 
@@ -67,3 +67,5 @@ function Carousel({
 }
 
 export default Carousel
+
+

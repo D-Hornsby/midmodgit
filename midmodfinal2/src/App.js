@@ -1,60 +1,71 @@
-import React from 'react';
+
+// import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+// import {Link, Route, Switch} from "react-router-dom";
+import NavBar from './components/NavBar';
 import './App.css';
-import Carousel from './components/Carousel/Carousel'
+
+// import Carousel from './components/Carousel/Carousel'
+import Home from "./components/Home";
+import Utah from "./components/utah";
+import SignUp from "./components/signUp";
 
 
-function App() {
-  return (
-    <div >
-     <Carousel />
-    </div>
+ class App extends Component {
+  render() {
+    return (
 
-  );
+      <>
+      <Router>
+      
+    
+          <div className="App">
+            <NavBar/>
+              <Switch>
+
+                  <Route path="/" component={Home}/>
+                  <Route path="/utah"component={Utah}/>
+                  <Route path="/signUp"component={SignUp}/>
+                
+              </Switch>
+            </div>
+     
+         </Router>
+      </>
+    
+    );
+  }
 }
 
 
 
 
-// import Carousel from "react-simply-carousel";
+export default App;
 
-// const photos = 
-//   {
-//   name: 'Photo1',
-  
-//   name: 'Photo2',
+//path is the Prop for <Route> if it matches path name it gets reandered
+//<Link> navigates to URL between pages only view re-rendered without a full page refresh
+//switch is added so only the first child route that matches gets rendered
 
-//   name: 'Photo3'
-// },
+//this is for the carousel an needs to be added into the set up
 
-
-// class App extends Component{
-//   state = {
-//     activeSlideIndex: 0,
-//   };
-//   setActiveSlideIndex = (newActiveSlideIndex) => {
-//     this.setState({
-//       activeSlideIndex: newActiveSlideIndex,
-
-//     });
-//   };
-
-//   render(){
+// function App() {
 //   return (
-//     <Carousel>
-//       activeSliChange={this.state.activeSlideIndex}
-//       onRequestChange={this.setActiveSlideIndex}
-//       itemsToShow={3}
-//       intemsToScroll={3}
-  
-//     <div style= {{width: 300, height: 300 }}>slide 0</div>
-//     <div style= {{width: 300, height: 300 }}>slide 1</div>
-//     <div style= {{width: 300, height: 300 }}>slide 2</div>
-// </Carousel>
-    
-    
-//     );
-//   }
+//     <div >
+//      <Carousel />
+//     </div>
+
+//   );
 // }
 
 
-export default App;
+
+
+
+
+
+
+
+
+ 

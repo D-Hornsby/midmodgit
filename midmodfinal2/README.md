@@ -62,7 +62,9 @@ So I found that that is nolinger maintained and I am going to try to build it wi
  npm install react-icons for my icons used on my photo slide
  not sure if this will work but i found the suggeston to try it
  I found a github for 
+
  react-icons.github.io/react/icons/icons?name=fa
+ 
  there is a lot of icons here ...love it
  Fa is for Font Awsome
 
@@ -251,17 +253,143 @@ https://reachlightspeed.com/blog/using-the-new-high-performance-avif-image-forma
 
 yep still not working. 
 i have reached out and im running out of time. i have tried several ways and using the avif was working for a second but now its not and i have done everything i can find
-feeling really sad right now...lol
+ok Jade is a genious. He removed 1 line and it worked. 
 
-
-the callback us used in the function for moving left and right just to print the src ...the photo in the console log. i might take that out. 
-
-
+it is bahaving badly and im having trouble getting it to let me style it. 
 
 
 
+im going to work on something else. ill come back to stylig its working but not pretty. 
+ 
+i want a main page or hero section and i seen this glass style that i really love. I may try that. 
+not sure yet how I want to approch it but ill starting with setting up the divs and linking pages
+im using 
+<li><a herf="/">Home</a></li> to start on that. 
+i started setting this up on app.js but i think i will make a main or hero. i liked how i seen that pages was made in components to hold the sidebar pages I think I will try that.  Not sure what to call it. i liked hero. i got both ideas from coding along with the Brian Design vid. 
+
+I also want that nav bar icon and my initials at the top for im going to import the fontawsome page in my html. 
+
+remember Elements are what components are “made of"
+
+I am working on making my components and getting them routed correctly. 
+I am using the nested routing method. 
+using router switch route
+and with my home rout ill have "/" so it will return to home when it hits /
+
+interesting Note: Behind the scenes a <Link> renders an <a> with a real href, so people using the keyboard for navigation or screen readers will still be able to use this app.
+
+Rout matchers ....like switch
+https://reactrouter.com/web/guides/primary-components
+lost of info 
+https://reactrouter.com/web/api/Switch
+
+this might be the idea i need for later when i have multible vacation places. 
+just putting here to not lose the idea for later
+https://reactrouter.com/web/guides/quick-start
 
 
+
+I made the app.js page...or changed it and made the nav bar i was building in it a component file. I need this to be my base file. Im going to register all the routs in my app.js file so i dont want the components in here. 
+ill put the links in here and REMEMBER to rout home to (/)!!
+
+i want my router to handle dynamic request so im using the BrowserRouter 
+the HashRouter is for serving static request
+
+**change your import tag Dena to include this
+
+im making a main page that im understanding is were i will rout everything back to the app page where the routs will be registered. 
+i am adding Browser Router in main were i can render the BrowserRouter object
+I wrapped app in the BrowserRouter tags and changed app to root
+
+i need components for each of my NavBar elements ...I guess i will do the one as Utah but later I want to add a Main component and have all the places and or events under that. For now I have Home, Utah and the SignIn.  I need to get the carousel to work in Utah. For not the componets will be simple, import render return and export
+
+I was going to put these all in pages, I may later. Trying to keep it simple. 
+-----------
+in my parent app.js im going to tell the children what to do. im going to set up the route. 
+inside an empty fregment(fregments let you group a list of children without adding extra nodes to the DOM)
+Can you style fregments?
+
+link above goes over the router to my navbar switch route paths. 
+
+-----
+my NavBar. im using useEffect becouse i liked the little icon i picked from fontAwsome
+
+----------------
+i need my nav bar to work. 
+set up every thing in order starting with NavBar
+then the NavBar container to hold the 3 pages
+i want to add my initals and the little logo at the top 
+also i like the hamburger toggle butten to take you back home. then
+then im adding my 3 pages. im putting booleans on everything
+it true..if false
+i want to be able to click the word!
+im going to use the link tag instead of the button becouse i like it and i want it to look cleaner then each page having a button.
+
+useParams
+Provides access to search parameters in the URL
+
+
+
+
+
+
+
+
+
+taking out of my app.js 
+i put did this test with my Carousel
+
+import { findRenderedComponentWithType } from 'react-dom/cjs/react-dom-test-utils.development';
+//for carousel. do i need this
+
+
+
+a different carousel...took out of my App.js 
+from when i 1st started the project. just going to put it here for now
+
+
+// export default connect(mapStateToProps, mapDispatchToProps)(App)
+
+// import Carousel from "react-simply-carousel";
+
+// const photos = 
+//   {
+//   name: 'Photo1',
+  
+//   name: 'Photo2',
+
+//   name: 'Photo3'
+// },
+
+
+// class App extends Component{
+//   state = {
+//     activeSlideIndex: 0,
+//   };
+//   setActiveSlideIndex = (newActiveSlideIndex) => {
+//     this.setState({
+//       activeSlideIndex: newActiveSlideIndex,
+
+//     });
+//   };
+
+//   render(){
+//   return (
+//     <Carousel>
+//       activeSliChange={this.state.activeSlideIndex}
+//       onRequestChange={this.setActiveSlideIndex}
+//       itemsToShow={3}
+//       intemsToScroll={3}
+  
+//     <div style= {{width: 300, height: 300 }}>slide 0</div>
+//     <div style= {{width: 300, height: 300 }}>slide 1</div>
+//     <div style= {{width: 300, height: 300 }}>slide 2</div>
+// </Carousel>
+    
+    
+//     );
+//   }
+// }
 
 
 
