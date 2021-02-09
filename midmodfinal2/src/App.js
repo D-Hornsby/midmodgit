@@ -6,11 +6,31 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 // import {Link, Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import './App.css';
+// import './Home.css';
+//for icon at top of navbar...they are not working
+// import {FaFeather} from 'react-icons/fa';
+// import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
+
+//where so you want your Carousel
 // import Carousel from './components/Carousel/Carousel'
-import Home from "./components/Home";
-import Utah from "./components/utah";
-import SignUp from "./components/signUp";
+import Home from "./components/Home2";
+import Utah from "./components/Utah1";
+import Form from "./components/Form";
+
+
+
+
+// function App ()  {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
+
+
+
 
 
  class App extends Component {
@@ -19,16 +39,18 @@ import SignUp from "./components/signUp";
 
       <>
       <Router>
-      
-    
-          <div className="App">
+         <div className="App">
             <NavBar/>
               <Switch>
-
-                  <Route path="/" component={Home}/>
-                  <Route path="/utah"component={Utah}/>
-                  <Route path="/signUp"component={SignUp}/>
-                
+                        
+                        <Route path="/" component={Home}/>    
+                        <Route path="/Utah1"component={Utah}/>
+                        
+                        {/* <Route path="/signUp"component={SignUp}/> */}
+                        <div>
+                        <Form/>
+                        </div> 
+                        
               </Switch>
             </div>
      
@@ -38,6 +60,7 @@ import SignUp from "./components/signUp";
     );
   }
 }
+
 
 
 

@@ -3,8 +3,11 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from './Button';
 import './NavBar.css';
-import { FaBeer } from 'react-icons/fa';
 
+// import { GiBoots } from "react-icons/gi";
+
+//http://react-icons.github.io/react-icons/icons?name=fa
+//above is the site i was usning with the icons
 
 // ln 2 for the icon on sidebar
 //setting up the handleClick in the div for menu-icon
@@ -14,15 +17,18 @@ import { FaBeer } from 'react-icons/fa';
 
 //setClick is my setState with the state created with click for my font awsome
 //const setClick and handleClick are toggling false true false true the accual change
-// in the hamburger ln 19, 20
+// in the hamburger ln  20,21
+
 // <ul className= {click ? 'nav-menu active' : 'nav-menu'}> is so nav dissapears when clicked
 function NavBar() {
 
     const [click, setClick] = useState(false);
     const [button, setButton]= useState(true);
-    const handleClick = ()=> setClick(!click);
+    // const handleClick = ()=> setClick(!click);
 
-    const closeMobileMenu =()=> setClick(false);
+    function closeMobileMenu() {
+        return setClick(false);
+    }
 
     const showButton =()=>  {
         if(window.innerWidth <= 900){
@@ -32,6 +38,30 @@ function NavBar() {
             setButton(true);
         }
     }
+
+//slide for nav bar if i can get it to work..= anomious function
+  //this nav bar was not working like i wanted it to.  it was doing a 
+  //flash out and not behaving at all i wanted this to be my glass that 
+  //slid out with the nav bar on it but for now its going to sit
+
+
+    // const navSlide = ()=>{
+    //     const burger = document.querySelector('.burger');
+    //     const navBar = document.querySelector('nav-links');
+    //     const navLinks = document.querySelector('.navLinks li');
+
+    //     burger.addEventListener('click', () => {
+    //         navBar.classList.toggle('nav-active');
+    //     });
+    // }
+    //envoke  animate links nav.slide so it works
+    // const app = ()=>{
+    //     navSlide();
+        
+    // }
+
+
+
 
 
     // useEffect(()=>{
@@ -47,40 +77,64 @@ function NavBar() {
                 <div className='navbar-container'>
                    
                     <Link to='/' className='navbar-logo' >
-                    DLH <i class="fas fa-umbrella-beach"></i>
+                      DLH {/*{GiBoots} */}
                     </Link>
                     
                      {/* <div className='menu-icon' onClick={handleClick} />
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}/> */}
+
                         </div> 
                 
-                    <ul className= {click ? 'nav-menu active' : 'nav-menu'}>
+                    <div className= {click ? 'nav-menu active' : 'nav-menu'}>
                         
-                        <li className= 'nav-item'>
-                            <Link to ="/"className='nav-links' onClick= {closeMobileMenu}>
+                        <div className= 'nav-item'>
+                            <Link to ="/Home2"className='nav-links' onClick= {closeMobileMenu}>
                                 Home</Link>
-                                </li>
+                                </div>
+                                
 
-                                <li className= 'nav-item'>
-                            <Link to ="/utah"className='nav-links'onClick= {closeMobileMenu}>
+{/*                                 
+                                 <div className= 'nav-item'>
+                            <Link to ="/utah1"className='nav-links'onClick= {closeMobileMenu}>
                                 Utah</Link>
-                                </li>
+                                </div> 
+                                 */}
 
-                                {/* <li className= 'nav-item'>
+                                 <div className= 'nav-item'>
                             <Link to ="/signup"className='nav-links'onClick= {closeMobileMenu}>
                                 SignUp
                                 </Link>
-                            </li> */}
+                            </div> 
                     
-                     </ul>
+                     </div>
+
+
+                     {/* <div className= "burger">
+                         <div className="line1"></div>
+                         <div className="line2"></div>
+                         <div className="line3"></div>
+                     </div> */}
+
+
                      {button && <Button buttonStyle='btn--outline'>SignUp</Button>}
                 <div/>
 
             </nav>
+            
         </>
       );
     }
 
+
+   
+          
+        
+        
+
+
+
+    //i took out the signup but i might add something. I liked the button better. 
+    //button added but ...not sure yet may use link after all dep on how it looks
     
 
   export default NavBar;
