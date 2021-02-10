@@ -29,6 +29,8 @@ const FormSignup = () => {
                 {errors.username && <p>{errors.username}</p>}
                 </div>
 
+
+
                 <div className="forms-inputs">
                 <label className="form-label">
                     Email
@@ -43,6 +45,8 @@ const FormSignup = () => {
                 />
                 {errors.email && <p>{errors.email}</p>}
                 </div>
+
+
 
                 <div className="forms-inputs">
                 <label className="form-label">
@@ -59,6 +63,8 @@ const FormSignup = () => {
                 />
                 {errors.password && <p>{errors.password}</p>}
                 </div>
+
+
 
                 <div className="forms-inputs">
                 <label className="form-label">

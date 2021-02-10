@@ -100,11 +100,11 @@ function NavBar() {
                                 </div> 
                                  */}
 
-                                 <div className= 'nav-item'>
+                                 {/* <div className= 'nav-item'>
                             <Link to ="/signup"className='nav-links'onClick= {closeMobileMenu}>
                                 SignUp
                                 </Link>
-                            </div> 
+                            </div>  */}
                     
                      </div>
 

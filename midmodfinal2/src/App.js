@@ -43,7 +43,7 @@ import Form from "./components/Form";
             <NavBar/>
               <Switch>
                         
-                        <Route path="/" component={Home}/>    
+                        <Route exact path="/" component={Home}/>    
                         <Route path="/Utah1"component={Utah}/>
                         
                         {/* <Route path="/signUp"component={SignUp}/> */}
