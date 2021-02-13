@@ -2,10 +2,16 @@ import React from 'react';
 import useForm from './useForm';
 import validate from './validate';
 import './Form.css';
-
+//1
+//import 2 useform 
+//setting up the form to the right an i want to add a pic on the left
+//setting up a validate on another component and importing it to check that imputs from user are correct.
+//Im atempting hooks..
 const FormSignup = () => {
+    console.log(typeof validate);
 
-    const {handleChange, values, handleSubmit, errors} = useForm(validate);
+    //added after making useForm to deconstruct values. const handleChange, values = useform()
+    const {handleChange, values, handleSubmit, errors} = useForm(null, validate);
 
     return (
         <div className="form-content-right">
@@ -63,7 +69,6 @@ const FormSignup = () => {
                 />
                 {errors.password && <p>{errors.password}</p>}
                 </div>
-
 
 
                 <div className="forms-inputs">

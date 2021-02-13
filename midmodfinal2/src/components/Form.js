@@ -3,7 +3,7 @@ import FormSignup from './FormSignup';
 import './Form.css';
 import FormSuccess from './FormSuccess';
 
-
+//adding statepass back in isSubmitted. set submit to true
 const Form = () => {
     const[isSubmitted, setIsSubmitted] = useState(false);
 
@@ -31,5 +31,7 @@ const Form = () => {
 };
 
 export default Form;
+
+//in form.js destructure 
 
 

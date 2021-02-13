@@ -1,9 +1,13 @@
+
+/* I used the selecter matching all elements in the DOM here to remove any styles like padding and 
+spacing that came with the basic elements giving me a clean slate to add wanted css*/
 * {
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
 }
 
+/* This lines my pics up left to right with icons in order*/
 .Carousel .container {
     display: flex;
     flex-direction: row;
@@ -12,6 +16,7 @@
 
 }
 
+/* My pics were stuck together and this gave them some spacing between each */
 .Carousel .container div {
     padding: 0 10px;
 }
@@ -25,6 +30,7 @@
     
 }
 
+/* I was atempting to make the center pic larger but i need to see why its not working like i want it to */
 .Carousel #pic1 {
     width: 70%px;
     /* height: 196px; */
@@ -32,5 +38,5 @@
 
 } 
 
-
+/* my css is not finished for the carousel at this point i have a lot to go */
 

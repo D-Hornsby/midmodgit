@@ -2,15 +2,18 @@
 /* this is someting new learned. routing css targeting the div */
 
 
+
 .form-container {
     margin: 100px auto;
-    width: 1000px;
+    width: 900px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
     height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
+    
   }
   
   .close-btn {
@@ -136,10 +139,11 @@
   
   .form-input-btn:hover {
     cursor: pointer;
-    background: linear-gradient(
+    /* background: linear-gradient(
       90deg,
       rgb(39, 143, 255) 0%,
-      rgb(12, 99, 250) 100%
+      rgb(12, 99, 250) 100% */
+      background: linear-gradient( #336299, #0D1926 
     );
     transition: all 0.4s ease-out;
   }

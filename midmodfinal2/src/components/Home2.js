@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './Home.css';
-import goblins from './Carousel/images/goblins.jpg';
+// import goblins from './Carousel/images/goblins.jpg';
 
 
-
+//I made a home page that renders with my NavBar and holds my cards on the glass
+//I wrapped my cards in places so i can add more later easly
+//I have the cards inside the glass but under the heading on the main 
+//but i added my circles outside the glass section so i could move them as i please on the main
 
 
 
@@ -31,7 +34,7 @@ class Home extends Component {
                     <div className="places">
                         <div className="cards">
                             <div className="card">South Dakota</div>
-                            <img src="./Carousel/images/goblins.jpg" alt=""></img>
+                            {/* <img src="./Carousel/images/goblins.jpg" alt=""></img> */}
                             <div className="card-info">
                                 <h2>Land of Great Faces</h2>
                             </div>
@@ -39,7 +42,7 @@ class Home extends Component {
 
                         <div className="cards">
                             <div className="card">Utah</div>
-                            <img src="./Carousel/images/goblins.jpg" alt=""></img>
+                            {/* <img src="./Carousel/images/goblins.jpg" alt=""></img> */}
                             <div className="card-info">
                                 <h2>Wilderness of Rock</h2>
                             </div>
@@ -47,7 +50,7 @@ class Home extends Component {
 
                         <div className="cards">
                             <div className="card">Colorado</div>
-                            <img src="./Carousel/images/goblins.jpg" alt=""></img>
+                            {/* <img src="./Carousel/images/goblins.jpg" alt=""></img> */}
                             <div className="card-info">
                                 <h2>Garden of the Gods</h2>
                             </div>
@@ -69,3 +72,4 @@ class Home extends Component {
 };
 
 export default Home;
+

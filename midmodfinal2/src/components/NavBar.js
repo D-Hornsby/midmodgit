@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useDebugValue, useState} from 'react';
 
 import {Link} from 'react-router-dom';
 import {Button} from './Button';
@@ -62,7 +62,7 @@ function NavBar() {
 
 
 
-
+//useEffect is for my icon 
 
     // useEffect(()=>{
     //     showButton();
@@ -125,8 +125,12 @@ function NavBar() {
       );
     }
 
-
-   
+// I did build 2 hamburger buttons here looking for how i want it
+// when i finish i will remove the one not used
+   //at first i was setting up on my nav bar to take me back home but that was a repeated function 
+   //thin i wanted my glass to slide out with cards on it using the hamburger but for now my glass is 
+   //not animated. due to time these are sitting for later. 
+   //i also considered using them with the moble fearure but that is not completed at this time
           
         
         

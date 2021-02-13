@@ -18,9 +18,13 @@ import Home from "./components/Home2";
 import Utah from "./components/Utah1";
 import Form from "./components/Form";
 
+//this is stull a work in progress as this app is not finished. 
 
+//I will register all the routs here the BrowserRouter added in main will render this BouwserRouter Object 
 
+//iremoved my nav bar from here and made it an component. 
 
+//I was importing my form here at first
 // function App ()  {
 //   return (
 //     <div>
@@ -31,7 +35,11 @@ import Form from "./components/Form";
 
 
 
-
+//with the switch when exact path was added i was able to toggle into my signup and back home again
+//My navBar sould show on every page 
+//at this point Utag has been changed from a word link as i have added a card for it that still needs 
+//linked up. 
+//using the nested routing method
 
  class App extends Component {
   render() {
@@ -44,14 +52,13 @@ import Form from "./components/Form";
               <Switch>
                         
                         <Route exact path="/" component={Home}/>    
-                        <Route path="/Utah1"component={Utah}/>
+                        {/* <Route path="/Utah1"component={Utah}/> */}
                         
-                        {/* <Route path="/signUp"component={SignUp}/> */}
-                        <div>
-                        <Form/>
-                        </div> 
+                        <Route path="/signUp"component={Form}/>
                         
               </Switch>
+                       
+
             </div>
      
          </Router>

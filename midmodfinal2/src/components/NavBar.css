@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
- 
+ /* my nav bar. i had this as a side bar at first but changed it to a nev bar */
 .navbar{
   display:flex;
   justify-content: space-evenly;

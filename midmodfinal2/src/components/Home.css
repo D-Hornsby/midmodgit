@@ -1,3 +1,9 @@
+/* using the selecter to remove any residual  styling i dont want */
+/* I was not getting my css to work. I did add sass but did not make these sass files .scss as it started working */
+/* the glass look is created with the opasity and linear-gradient. I used one color but different values of that color threw out my css along with white
+with white and the added blur it gave a nice glass look.
+my cards are looking like cards but i still have work to do and they need linked up */
+
 * {
     margin:0;
     padding: 0;
@@ -32,9 +38,7 @@ p {
     font-size: 30px;
     padding-left: 8px;
     padding-right: 8px;
-   
     
-  
 }
 
 /* card body */
@@ -45,6 +49,7 @@ h2{
     opacity: 0.8;    
 
 }
+
 
 .cards {
     margin: .8rem; 
@@ -116,6 +121,7 @@ main {
     display: flexbox;
     /* background-color: yellow; */
 }
+/* above display flexbox instead of displaying flex finaly moved my cards under the header!!!!! */
 
 .circle1, .circle2{
     background: azure;
